@@ -55,12 +55,14 @@ with open(budget_file, encoding='utf-8') as budget_data:
   avg_change = sum(daily_change2) / len(daily_change2)
 
   #print results of analysis
-  print("Financial Analysis")
-  print("----------------------------")
+Results = (
+print("Financial Analysis"),
+print("----------------------------"),
+print("Total months: " + str(data_length) + ""),
+print("Total: $" + str(total_pnl) + ""),
+print("Average change: $" + str(round(avg_change,2))),
+print("Greatest Increase in Profits: " + str(max_change_date) + " ($" + str(max_change) + ")"),
+print("Greatest Decrease in Profits: " + str(min_change_date) + " ($" + str(min_change) + ")")
+)
 
-  print("Total months: " + str(data_length) + "")
-  print("Total: $" + str(total_pnl) + "")
-  print("Average change: $" + str(round(avg_change,2)))
-  print("Greatest Increase in Profits: " + str(max_change_date) + " ($" + str(max_change) + ")")
-  print("Greatest Decrease in Profits: " + str(min_change_date) + " ($" + str(min_change) + ")")
 
